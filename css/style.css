@@ -1,0 +1,192 @@
+        html { background: transparent  repeat-x; margin: 0; padding: 20px; }
+        body { font-family: "Segoe UI", Tahoma, Helvetica, Arial, Sans-Serif; margin: 0; padding: 0; line-height: 150%; background: transparent no-repeat center top; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; color: #434343; }
+        
+        .container { width: 1000px; margin: 0 auto 0 auto; padding: 40px 0 0 0; }
+        .header { overflow:auto; border: 1px}
+        .header img { float: left; padding: 18px 25px 10px 0px; }
+        
+        h1 { font-size: 1.6em; font-weight: normal; padding-left:30px;}
+        h3 { font-size: 1.1em; font-weight: normal; }
+        
+        a { color: #577fae; }
+        a:hover { color: #92a5bc; }
+		
+		ul { list-style:none; padding:0px;}
+        
+        
+        header, footer ,section ,nav,article ,aside{
+        margin: auto;
+        width: 0 px;
+        display: block;
+        border: 1px dotted #c7ccd3;
+        }
+        
+        header { background: #999999;  width:1000px; overflow: auto;}       
+        section { background: #999999;  width:1000px; height:500px; overflow: auto;}
+        footer { background: #999999;  width:1000px; font-size: 0.7em; height:50px; list-style: none; border: 1px dotted #c7ccd3; overflow: auto; }
+       
+        footer li { width: 49%; text-align: left; float: left; color: #999999; }
+        footer li:first-child { width: 49%; text-align: right; float: right; color: #434343; }
+      
+
+        
+        nav { background: transparent repeat-x; float:right; width:20% ; border: 1px dotted #c7ccd3; text-align: center;  }
+                 
+        .content { overflow: auto; font-size: 0.9em; border: 1px dotted #c7ccd3; }
+        .content .start { float: left; width: 40%; padding: 0 20px 0 15px; border-right: 1px dotted #c7ccd3; } 
+        .content .resources { float: left; width: 40%; padding: 0 0 0 30px; border-left: 1px dotted #c7ccd3; }       
+        .addToWallet { float: right; width: 40px; height:40px; padding: 0 0 0 0;border-bottom: 1px dotted #c7ccd3;  } 
+        .addForm {float: right;}	
+ 		.logo { height: 60px; width: 50px; background: transparent repeat-x;float:left;  border: 1px dotted #c7ccd3;text-align: center;}
+		.searchE { background: transparent repeat-x;float:left; width:20%; border: 1px dotted #c7ccd3;text-align: center; margin-top:35px;}
+		.WhiteContour { background-color:#FFFFFF ;float:left; width:700px; height:400px;margin:15px 0px 15px 65px;   border: 1px dotted #c7ccd3; }
+		.MainOWL { background-color:#bbbbbb ;float:left; width:650px; height:350px;margin:25px; border: 1px dotted #c7ccd3; }
+
+		
+        #title { background: transparent repeat-x;float:left; width:40%; border: 1px dotted #c7ccd3;text-align: center;  }   
+        .slideTitle { background: transparent repeat-x;  margin:0px; border: 1px dotted #c7ccd3;padding: 0px 0px 0 100px;  }   
+		.UrLDiv {  background-color:#555555 ;float:left; width:280px; height:30px; border: 1px dotted #c7ccd3; margin:5px 5px 5px 5px; padding: 5px 0px 0 20px; }
+		li:hover { color: #92a5bc; background-color:#777777 ;}
+		
+		.sidePagesType {  background-color:#333333 ;float:left; width:10px; height:400px; border: 1px dotted #c7ccd3; display:block; margin-top:18px;	}
+		.urlFormLabel { color:#92a5bc;font-size: 2 em;}
+
+		label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+		.submit { margin-left: 12em; }
+		
+		
+/*
+	Slideshow style
+*/
+#slides {
+	position:absolute;
+	z-index:100;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	If height not specified height will be set by the slide content
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:650px;
+	height:350px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+	border: 1px dotted #c743d3;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	Offeset for the 20px of padding
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+#slides .slide {
+	padding:20px;
+	width:630px;
+	height:330px;
+	display:block;
+	
+}
+
+/*
+	Next/prev buttons
+*/
+#slides .next,#slides .prev {
+	position:absolute;
+	top:150px;
+	left:-39px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+	border: 1px dotted #c743d3;
+}
+
+#slides .next {
+	left:663px;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+/*
+	Footer
+*/
+
+#footer {
+	text-align:center;
+	width:580px;
+	margin-top:9px;
+	padding:4.5px 0 18px;
+	border-top:1px solid #dfdfdf;
+}
+
+#footer p {
+	margin:4.5px 0;
+	font-size:1.0em;
+}
+
+/*
+	Type and anchors
+*/
+
+a:link,a:visited {
+	color:#599100;
+	text-decoration:none;
+}
+
+a:hover,a:active {
+	color:#599100;
+	text-decoration:underline;
+}
+
+
+p {	font-size:1.3em; }
+
+#slides .link {
+	display:block;
+	margin-top:10px;
+	font-weight:800;
+	border: 1px dotted #c7ccd3;
+}
+
+        .insidecontent { overflow: auto; font-size: 0.9em; padding: 10px 0 10px 0; }
+        .insidecontent .start { float: left; width:310px ;padding: 0 0px 0 0px; border: 1px dotted #c7ccd3; /*border-right: 1px dotted #c7ccd3;*/ } 
+        .insidecontent .resources { float: left; width: 310px; padding: 0 0 0 0px; border: 1px dotted #c7ccd3;/* border-left: 1px dotted #c7ccd3;*/ } 
+        

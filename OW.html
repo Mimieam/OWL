@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+   <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+<head>
+		<title> OW </title><meta charset="utf-8">
+		
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery-ui-1.8.21.custom.css">
+	
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+		<!-- <script src="../../jquery-1.7.2.js"></script>
+		<script src="js/jquery/jquery.bgiframe-2.1.2.js"></script>
+		<script src="js/jquery/ui/jquery.ui.core.js"></script>
+		<script src="js/jquery/ui/jquery.ui.widget.js"></script>
+		<script src="js/jquery/ui/jquery.ui.mouse.js"></script>
+		<script src="js/jquery/ui/jquery.ui.button.js"></script>
+		<script src="js/jquery/ui/jquery.ui.draggable.js"></script>
+		<script src="js/jquery/ui/jquery.ui.position.js"></script>
+		<script src="js/jquery/ui/jquery.ui.resizable.js"></script>
+		<script src="js/jquery/ui/jquery.ui.dialog.js"></script>
+		<script src="js/jquery/ui/jquery.effects.core.js"></script> -->
+		
+		<script src="js/slides.min.jquery.js"></script>
+		<script src="js/JScript.js"></script>
+		<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+   
+</head>
+	<style>
+		label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0; margin-top:25px; }
+		
+		div#users-contain { width: 350px; margin: 20px 0; }
+		div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+		div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+		.ui-dialog .ui-state-error { padding: .1em; }
+		.validateTips { border: 1px solid transparent;}
+		.demo{position:absolute;}
+		.ui-dialog  {font-size: 0.8em;}
+		
+	</style>
+	<script>
+		$(function(){
+			// Set starting slide to 1
+			var startSlide = 1;
+			// Get slide number if it exists
+			if (window.location.hash) {
+				startSlide = window.location.hash.replace('#','');
+			}
+			// Initialize Slides
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				generatePagination: true,
+				play: 0,
+				pause: 2500,
+				hoverPause: true,
+				// Get the starting slide
+				start: startSlide,
+				animationComplete: function(current){
+					// Set the slide number as a hash
+					window.location.hash = '#' + current;
+				}
+			});
+		});
+	</script>
+<body>
+   <header >
+        <h1 id = 'title'> Online W </h1>
+        <nav class = 'navbar'>
+        <a id="create-user" href="#">Sign Up |<-->|Login</a>
+		<!-- <button id="create-user">Create new user</button> -->
+		<!-- Login or sign up-->
+		<!-- 	<div class="LoginUpForm" style="display:none"> 	 
+				<form method="post" action="loginup.php" id="form">
+					<div style="margin-bottom:6px">
+						<h2>Login or Signup</h2>
+						<label>Email</label> <br/>
+						<input type="text" name="email"  class="input" id="email"/><br />
+						<input type="radio" name="choose" id="login" checked="checked" class="radio"/> I have an account <br />
+						<input type="radio" name="choose" id="signup" class="radio"/> I am new!<br />
+					</div>
+					<div style="" id="login_block">
+						<label>Password</label><br />
+						<input type="password" name="password" class="input" id="password"/><br/>
+						<input type="submit" value=" Login " class="button"/> 
+					</div>
+					<div id="signup_block">
+						<label>Choose password</label><br/>
+						<input type="password" name="newpassword" class="input" id="newpassword" /><br/>
+						<input type="submit" value=" Signup " class="button"/>
+					</div>
+				</form>
+			</div> -->
+			
+
+
+			
+			
+        </nav>
+   </header>
+
+   <section class = 'content'>
+       <article class = 'header'>
+			<hgroup> 
+				<div class = 'logo'> logo here
+				</div>
+				<div class = 'searchE'>
+					<input> </input>
+				</div>
+				<button type="button" class = "addToWallet"> <strong> + </strong> </button>			   
+			</hgroup>
+       </article>
+       <article>
+			<div class = 'WhiteContour'> 
+			<div class = 'MainOWL'>  
+				
+			<div id="slides">
+				<div class="slides_container">
+					<div class="slide">
+					<p class = "slideTitle"> Type </p>
+						 <div class="insidecontent">          
+								<div class="start">
+									<!-- <p>Right Column</p> -->
+									<ul id ="RightColumn">
+										<li class = "UrLDiv"><a href="#">WebMatrix Overview</a></li>
+										<li class = "UrLDiv"><a href="#">Google.com</a></li>
+										<li class = "UrLDiv"><a href="#">Yahoo.com</a></li>
+										<li class = "UrLDiv"><a href="#">Facebook.com</a></li>
+										<li class = "UrLDiv"><a href="#">StackOverflow</a></li>
+									 
+									</ul>
+								</div>
+								<div class="resources">
+									<!-- <p>Left Column</p> -->
+									<ul id ="LeftColumn">
+										<li class = "UrLDiv"><a href="#">Create your first website using WebMatrix</a> </li>
+										<li class = "UrLDiv"><a href="#">blabla.com</a></li>
+										<li class = "UrLDiv"><a href="#">codingStyle.com</a></li>
+										<li class = "UrLDiv"><a href="#">Echimane.com</a></li>
+										<li class = "UrLDiv"><a href="#">FT.com</a></li>
+									</ul>
+								</div>
+							</div>
+						<div> <a href="#4" class="link">next Page &rsaquo;</a> </div>
+					</div>
+					<div class="slide">
+						<h1>Third Slide</h1>
+									Main Wallet  Here
+			    <!---->            <h1>Post title</h1>
+					<h2>Subtitle and info</h2>
+							<p>Content goes here.</p>
+						<p><a href="#1" class="link">Check out the first slide &rsaquo;</a></p>
+					</div>
+					<div class="slide">
+						<h1>Fourth Slide</h1>
+						<p><a href="#6" class="link">Check out the sixth slide &rsaquo;</a></p>
+					</div>
+					<div class="slide">
+						<h1>Fifth Slide</h1>
+						<p><a href="#7" class="link">Check out the seventh slide &rsaquo;</a></p>
+					</div>
+				</div>
+				<a href="#" class="prev"><img src="img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+				<a href="#" class="next"><img src="img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+			</div>
+				
+		
+
+<!-- END SLIDE PAGES-->
+		   </div>
+		   </div>
+			<div class = "sidePagesType">
+			    <div class="formAddToWallet" style="display:none"> 					
+					<form  id ="input_form" action="" method="get">    
+						<fieldset> 
+						
+							<label class = "urlFormLabel" for="url_input" > Url : </label>       
+							<input  name="url_input" id="url_input" class = "required" minlength="2"/>
+							
+							<label class = "urlFormLabel" for="name_input" > Name : </label> 
+							<input  name="name_input" id="name_input"  class="required"/>
+							
+							<label class = "urlFormLabel" for="type_input" > Type : </label> 
+							<input  name="type_input" id="type_input"  class="required"/>
+							
+							<button  name="addThisURL" id="addThisURL" > Add new URL</button>
+							
+						</fieldset>
+					</form>
+				</div>
+			</div>
+      </article>
+   </section>
+   <aside>
+
+		
+<div class="demo">
+
+<div id="dialog-form" title="Create new user">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form>
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
+
+
+<div id="users-contain" class="ui-widget">
+	<h1>Existing Users:</h1>
+	<table id="users" class="ui-widget ui-widget-content">
+		<thead>
+			<tr class="ui-widget-header ">
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John Doe</td>
+				<td>john.doe@example.com</td>
+				<td>johndoe1</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+</div><!-- End demo -->
+	<!-- Sidebar here --> 
+
+   </aside>
+   <footer> This is my footer</footer>
+</body>
+</html>
